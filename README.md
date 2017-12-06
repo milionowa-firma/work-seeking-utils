@@ -1,2 +1,128 @@
 # work-seeking-utils
-Filter advertisements, browse companies and opinions about them 
+Filter advertisements/unwanted offers, browse companies and opinions about them
+
+
+Portals promote certain offers, thus it is usually undesired to provide user with function to filter unwanted out. Yet, here is easy solution.
+
+1. install [Chromium JS extension](https://chrome.google.com/webstore/detail/custom-javascript-for-web/ddbjnfjiigjmcpcpkmhogomapikjbjdk)
+2. paste and modify below to filter out unwanted job offers (for now Glassdoor.com, nofluffjobs.pl, justjoin.it, pracuj.pl, linkedin.com/jobs/search
+
+
+## Glassdoor.com
+
+Glassdoor.com
+
+```javascript
+
+var unwanted = ["Some", "Unwanted", "Companies"];
+
+unwanted.forEach((o, i, a) => a[i] = a[i].replace("&", "&amp;"));
+
+customjsReady(".mfp-bg mfp-ready", function(i){ $(this).hide(); }); // hide annoying popup
+
+let item_class = "li.jl";
+var hidden = [];
+customjsReady(item_class, function( index ) {
+    var row = $(this).find(".empLoc").html();
+    var company = row.substring(6, row.indexOf("– <span class=")-1).trim();
+    if ($.inArray(company, unwanted) != -1){
+        $(this).hide();
+        hidden.push(company);
+    }
+});
+if (hidden.length > 0)
+  setTimeout( function(){alert("Companies hidden: " + hidden.filter((v, i, a) => a.indexOf(v) === i))}, 1000 );
+```
+
+## NoFluffjobs.pl
+
+NoFluffjobs.pl
+
+```javascript
+
+var unwanted = ["Some", "Unwanted", "Companies"];
+// example     ["IT Kontrakt", "ASTEK Polska", "CodiLime", "7N"];
+var hidden = [];
+let item_class = ".list-item";
+customjsReady(item_class, function( index ) {
+    var row = $(this).find(".posting-company").html();
+    var company = row.substring(row.indexOf("@ ") + 2, row.indexOf("</span>"));
+    if ($.inArray(company, unwanted) != -1){
+        $(this).hide();
+        hidden.push(company);
+    }
+});
+alert("Companies hidden: " + hidden.filter((v, i, a) => a.indexOf(v) === i));
+
+```
+
+## justjoin.it
+
+justjoin.it
+
+```javascript
+
+// same like above but replace
+let item_class = ".offer-item";
+
+// and
+  var row = $(this).find(".company-name");
+  var company = $(row).text().trim().substr(1).trim();
+
+```
+
+## pracuj.pl
+
+pracuj.pl
+
+```javascript
+
+// same like above but replace
+let item_class = "li.o-list_item";
+
+// and
+  var row = ""; // or remove line
+  var company = $(this).find("h3").text().trim();
+
+```
+
+
+## linkedin.com/jobs/search
+
+linkedin.com/jobs/search
+
+```javascript
+
+// without jQuery for a change
+var unwanted = ["Some", "Unwanted", "Companies"];
+var hidden = [];
+let item_class = "li.job-listing";
+customjsReady(item_class, function( index ) {
+    var company = index.getElementsByClassName("company-name-text")[0].innerText;
+    unwanted.forEach(function(entry) {
+      if (unwanted.indexOf(company) != -1 && index.parentElement){
+        index.parentElement.removeChild(index);
+        hidden.push(company);
+      }
+    });
+});
+if (hidden.length > 0)
+  setTimeout( function(){ alert("Companies hidden: " + hidden.filter((v, i, a) => a.indexOf(v) === i))}, 1000 );
+
+```
+
+
+
+TODO:
+
+<img src="https://lipis.github.io/flag-icon-css/flags/4x3/gb.svg" width="48"> [UK readme](docs/README_EN.md)
+<img src="https://lipis.github.io/flag-icon-css/flags/4x3/pl.svg" width="48"> [PL readme](docs/README_PL.md)
+
+
+<!---
+
+[[ http://www.sheawong.com/wp-content/uploads/2013/08/keephatin.gif | height = 100px ]] [PL readme](docs/README_PL.md)
+
+[//]: # ([![Read (UK)](https://lipis.github.io/flag-icon-css/flags/4x3/gb.svg)]["UK readme"](docs/README\_EN.md))
+[//]: # ([![Przeczytaj (PL)](https://lipis.github.io/flag-icon-css/flags/4x3/pl.svg)](["PL readme"](docs/README_PL.md)))
+-->
