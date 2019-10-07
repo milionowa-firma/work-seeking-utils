@@ -10,7 +10,7 @@ Portals promote certain offers, thus it is usually undesired to provide user wit
 
 ## Glassdoor.com
 
-Glassdoor.com
+glassdoor.com
 
 ```javascript
 
@@ -34,9 +34,9 @@ if (hidden.length > 0)
   setTimeout( function(){alert("Companies hidden: " + hidden.filter((v, i, a) => a.indexOf(v) === i))}, 1000 );
 ```
 
-## NoFluffjobs.pl
+## NoFluffJobs.com
 
-NoFluffjobs.pl
+nofluffjobs.com
 
 ```javascript
 
@@ -56,7 +56,7 @@ alert("Companies hidden: " + hidden.filter((v, i, a) => a.indexOf(v) === i));
 
 ```
 
-## justjoin.it
+## JustJoin.it
 
 justjoin.it
 
@@ -71,7 +71,7 @@ let item_class = ".offer-item";
 
 ```
 
-## pracuj.pl
+## Pracuj.pl
 
 pracuj.pl
 
@@ -87,7 +87,7 @@ let item_class = "li.o-list_item";
 ```
 
 
-## linkedin.com/jobs/search
+## Linkedin.com/jobs/search
 
 linkedin.com/jobs/search
 
@@ -111,6 +111,11 @@ if (hidden.length > 0)
 
 ```
 
+## todo: stackoverflow.com/jobs parser
+## todo: zdalnie.io parser
+
+## todo:
+- parsers for aggregators: "JobsForGeek", "Crossweb", "JarJobs.com", "IT-Leaders_pl2018", "Bulldogjob" ( all of them publish also aggregated posts on wykop.pl )
 
 
 TODO:
