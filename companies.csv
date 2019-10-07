@@ -1,39 +1,39 @@
-company; location; comments
-7 sensing software; Warszawa;
-ABB; Kraków;
-Aeolus Robotics; Wrocław;
-AIUT; xxxxxxx;
-Alten; Berlin;automotive
-Antega; xxxxxx;
-Apple; Berlin; kandydatów niby 66/10d
-Athenry; Connacht_Irlandia ;
-Bombardier ; śląsk ;
-Bose; Esstingen ; audio
-Brunel; xxxxxx; 
-Cadence; śląsk;
-Carmeq; Berlin;
-Caterpilar; Wackersdorf; industrial
-Chapman Black; Munich;
-Cinemo; xxxxxx; video player, automotive
-Computer Futures; Berlin ;
-Delivery Hero; xxxxxx; seniorom płacą ok 70kE/Y
-Devire; Wrocław; pośrednik
-DIHK Service GmBh; Berlin ;
-Displaylink; śląsk;
-Elektrobit; xxxxxx; automotive
-ETAS; Stuttgart ;
-EZLAB; śląsk;
-Flight scope; śląsk ;
-FP instruments; śląsk ;
-Grafton; Śląsk; pośrednik
-Grinn; Wrocław ;
-Hangscheng; Berlin;
-Hella; Berlin; automotive, światła
-IAV GmbH; Berlin ; automotive
-Intel; Gdańsk;
-Irvine; California;
-IT Kontrakt; xxxxxxx; pośrednik
-Kinexon; Munich;
-L3 Tech; California;
-LivaNova; Munich;
-MatchX; Berlin;kandydatów niby 750/14d
+company                     ,         location              ,         comments
+7 sensing software          ,         Warszawa              ,        
+ABB                         ,         Kraków                ,        
+Aeolus Robotics             ,         Wrocław               ,        
+AIUT                        ,         xxxxxxx               ,        
+Alten                       ,         Berlin                ,         automotive
+Antega                      ,         xxxxxx                ,        
+Apple                       ,         Berlin                ,         kandydatów niby 66/10d
+Athenry                     ,         Connacht_Irlandia     ,        
+Bombardier                  ,         śląsk                 ,        
+Bose                        ,         Esstingen             ,         audio
+Brunel                      ,         xxxxxx                ,         
+Cadence                     ,         śląsk                 ,        
+Carmeq                      ,         Berlin                ,        
+Caterpilar                  ,         Wackersdorf           ,         industrial
+Chapman Black               ,         Munich                ,        
+Cinemo                      ,         xxxxxx                ,         video player- automotive
+Computer Futures            ,         Berlin                ,        
+Delivery Hero               ,         xxxxxx                ,         seniorom płacą ok 70kE/Y
+Devire                      ,         Wrocław               ,         pośrednik
+DIHK Service GmBh           ,         Berlin                ,        
+Displaylink                 ,         śląsk                 ,        
+Elektrobit                  ,         xxxxxx                ,         automotive
+ETAS                        ,         Stuttgart             ,        
+EZLAB                       ,         śląsk                 ,        
+Flight scope                ,         śląsk                 ,        
+FP instruments              ,         śląsk                 ,        
+Grafton                     ,         Śląsk                 ,         pośrednik
+Grinn                       ,         Wrocław               ,        
+Hangscheng                  ,         Berlin                ,        
+Hella                       ,         Berlin                ,         automotive- światła
+IAV GmbH                    ,         Berlin                ,         automotive
+Intel                       ,         Gdańsk                ,        
+Irvine                      ,         California            ,        
+IT Kontrakt                 ,         xxxxxxx               ,         pośrednik
+Kinexon                     ,         Munich                ,        
+L3 Tech                     ,         California            ,        
+LivaNova                    ,         Munich                ,        
+MatchX                      ,         Berlin                ,         kandydatów niby 750/14d
